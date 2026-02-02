@@ -18,7 +18,7 @@ print(cities[0])
 print(numbers[-1])
 
 # Попробуй получить элемент с индексом 10 из cities. Что произойдет?
-# print(numbers[10]) # list index out of range
+# print(cities[10]) # list index out of range
 
 # Замени второй элемент списка numbers на 10.
 numbers[1] = 10
@@ -82,51 +82,51 @@ print(ord(list1[0]), ord(list1[1]), ord(list1[2]), ord(list1[3]), ord(list1[4]),
 # print(sum(list1)) складвать строки нельзя
 
 # Создай список с городами.
-Cities = ["Санкт-Петербург", "Самара", "Калиниград", "Саратов"]
+cities = ["Санкт-Петербург", "Самара", "Калиниград", "Саратов"]
 
 # Создай копию списка с помощью среза.
-Cities_copy = Cities[::]
-print(Cities_copy)
+cities_copy = cities[::]
+print(cities_copy)
 
 # Проверь, является ли оригинальный список и его копия разными объектами.
-print(id(Cities_copy), id(Cities))
+print(id(cities_copy), id(cities))
 
 # Выведи 2-й и 3-й элементы списка с городами.
-print(Cities[1:3])
+print(cities[1:3])
 
 # Выведи все элементы, начиная с 3-го.
-print(Cities[2:])
+print(cities[2:])
 
 # Выведи первые три элемента.
-print(Cities[:3])
+print(cities[:3])
 
 # Выведи весь список через срез.
-print(Cities[:])
+print(cities[:])
 
 # Используй отрицательные индексы для выбора последних двух элементов.
-print(Cities[-2:])
+print(cities[-2:])
 
 # Выведи каждый второй элемент списка с городам.
-print(Cities[1::2])
+print(cities[1::2])
 
 # Выведи список в обратном порядке.
-print(Cities[::-1])
+print(cities[::-1])
 
 # Выведи каждый второй элемент с конца.
-print(Cities[::-2])
+print(cities[::-2])
 
 # Замени 2-й и 3-й элементы списка с городами на "Сочи" и "Нижний Новгород".
-Cities[1] = 'Сочи'
-Cities[2] = 'Нижний Новгород'
-print(Cities)
+cities[1] = 'Сочи'
+cities[2] = 'Нижний Новгород'
+print(cities)
 
 # Замени каждый второй элемент на "Город".
-Cities [1::2] = ['Город'] * len(Cities[1::2])
-print(Cities)
+cities [1::2] = ['Город'] * len(cities[1::2])
+print(cities)
 
 # Присвой новые значения кортежем: cities[1:3] = "Волгоград", "Омск".
-Cities[1:3] = ("Волгоград", "Омск")
-print(Cities)
+cities[1:3] = ("Волгоград", "Омск")
+print(cities)
 
 # Объедини два списка [1, 2, 3] и [4, 5, 6].
 num_3 = [1, 2, 3] + [4, 5, 6]
@@ -176,7 +176,8 @@ numbers.remove(10)
 print(numbers)
 
 # Удали последний элемент списка и выведи его (pop()).
-numbers.pop()
+print(numbers.pop())
+
 
 # Удали элемент с индексом 1 с помощью pop().
 numbers.pop(1)
@@ -262,7 +263,7 @@ print(matrix_2d)
 print(matrix_2d[1])
 
 # Выведи первый элемент третьей строки.
-print([2][0])
+print(matrix_2d[2][0])
 
 # Замени все элементы первой строки на 0.
 matrix_2d[0] = [0, 0, 0, 0]
