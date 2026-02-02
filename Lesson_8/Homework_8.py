@@ -46,14 +46,17 @@ print(result)
 lst_num = []
 for i in range(1, 21):
     lst_num.append(i)
-print(lst_num) # Слишком лень создавать список вручную)
+print(lst_num)
 
-result = [f'Четное' if num % 2 == 0 else f'Нечетное' for num in lst_num]
+result = ['Четное' if num % 2 == 0 else 'Нечетное' for num in lst_num]
 print(result)
 
 # ===============================================
 # 5. Проверка, является ли объект итерируемым
 # Создайте список внутри которого 3 объекта: число, строка и список.
-list_x = [4, 'stroka', [2, 'str_in']]
-
 # Создайте генератор в котором будет написано True - если объект является итерируемым или False - если нет.
+
+lst_words = [4, 'stroka', [2, 'str_in'], 4, 142, 123, 42, 'test', 'text']
+i = 0
+result = ['True' if type(i) == int or type(i) == float or type(i) == bool else 'False' for i in lst_words ]
+print(result)
