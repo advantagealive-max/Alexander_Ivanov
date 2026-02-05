@@ -1,22 +1,30 @@
-# 14. Создайте функцию merge_dicts(*dicts), которая объединяет несколько словарей в один.
-# При совпадении ключей используется последнее значение.
+# 2. Напишите функцию counter(start=0), которая возвращает вложенную функцию.
+# Каждый вызов вложенной функции должен увеличивать счетчик на 1.
 # Пример вызова:
-# d1 = {"a": 1, "b": 2}
-# d2 = {"b": 3, "c": 4}
-# d3 = {"c": 5, "d": 6}
-# print(merge_dicts(d1, d2, d3))
-# Ожидаемый результат:
-# {'a': 1, 'b': 3, 'c': 5, 'd': 6}
+#
+# c1 = counter(5)
+# c2 = counter()
+#
+# print(c1())  # 6
+# print(c1())  # 7
+# print(c2())  # 1
+# print(c2())  # 2
+#
+# Подсказка: используйте nonlocal
 # """
 
+def counter(start=0):
+    count = start
+    def count_pl():
+        nonlocal count
+        count += 1
+        return count
+    return count_pl
 
-def merge_dicts(*dicts):
-    result = {}
-    for d in dicts:
-        result.update(d)
-    return result
+c1 = counter(5)
+c2 = counter()
 
-d1 = {"a": 1, "b": 2}
-d2 = {"b": 3, "c": 4}
-d3 = {"c": 5, "d": 6}
-print(merge_dicts(d1, d2, d3))
+print(c1())  # 6
+print(c1())  # 7
+print(c2())  # 1
+print(c2())  # 2
