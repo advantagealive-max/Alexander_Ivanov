@@ -1,30 +1,26 @@
-# 2. Напишите функцию counter(start=0), которая возвращает вложенную функцию.
-# Каждый вызов вложенной функции должен увеличивать счетчик на 1.
-# Пример вызова:
+# 7. Установите библиотеку matplotlib и постройте график.
+# Напишите код:
+# import matplotlib.pyplot as plt
 #
-# c1 = counter(5)
-# c2 = counter()
+# x = [1, 2, 3, 4, 5]
+# y = [10, 20, 25, 30, 50]
 #
-# print(c1())  # 6
-# print(c1())  # 7
-# print(c2())  # 1
-# print(c2())  # 2
-#
-# Подсказка: используйте nonlocal
-# """
+# plt.plot(x, y, marker='o')
+# plt.title("Пример графика")
+# plt.xlabel("X")
+# plt.ylabel("Y")
+# plt.show()
 
-def counter(start=0):
-    count = start
-    def count_pl():
-        nonlocal count
-        count += 1
-        return count
-    return count_pl
+import matplotlib.pyplot as plt
 
-c1 = counter(5)
-c2 = counter()
 
-print(c1())  # 6
-print(c1())  # 7
-print(c2())  # 1
-print(c2())  # 2
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 25, 30, 50]
+
+plt.plot(x, y, marker='o')
+plt.title("Пример графика")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show
+

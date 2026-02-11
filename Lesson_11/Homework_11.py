@@ -114,12 +114,13 @@ def reverse_string(text):
 
 def compare_strings(s1, s2, ignore_case=True, ignore_spaces=True):
     if ignore_case:
-        return s1.lower() == s2.lower()
-    elif ignore_spaces:
-        return s1.strip() == s2.strip()
-    else:
-        return s1 == s2
-# В первом примере не верный результат получается. Мы сравниваем 2 строки не убирая пробелы и регистр (из условий задачи)
+        s1, s2 = s1.lower(), s2.lower()
+
+    if ignore_spaces:
+        s1, s2 = s1.split(), s2.split()
+    return s1 == s2
+
+
 
 # 10. Напишите функцию summarize(*args), которая возвращает сумму всех переданных чисел.
 # Если переданы нечисловые значения, игнорируйте их.
@@ -130,7 +131,7 @@ def compare_strings(s1, s2, ignore_case=True, ignore_spaces=True):
 def summarize(*args):
     sum = 0
     for i in args:
-        if type(i) == int:
+        if type(i) == int or type(i) == float:
             sum += i
         else:
             continue
@@ -173,6 +174,8 @@ create_profile("Иван", 30, city="Москва", job="Инженер")
 def process_orders(*orders, discount=0):
     if discount:
         return f'Сумма заказа: {sum(orders)}\nС учетом скидки: {int((sum(orders) - (sum(orders) / 100) * discount))}'
+    else:
+        return f'Сумма заказа: {sum(orders)}\nСкидка отсутствует'
 
 # ===============================================
 # 13. Создайте функцию merge_lists(*lists), которая объединяет несколько списков в один.
@@ -187,7 +190,7 @@ def merge_lists(*lists):
         res_list.extend(lst)
     return res_list
 
-print(merge_lists([1, 2], [3, 4], [5, 6])
+print(merge_lists([1, 2], [3, 4], [5, 6]))
 
 # ===============================================
 # 14. Создайте функцию merge_dicts(*dicts), которая объединяет несколько словарей в один.

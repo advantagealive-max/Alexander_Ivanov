@@ -58,5 +58,5 @@ print(result)
 
 lst_words = [4, 'stroka', [2, 'str_in'], 4, 142, 123, 42, 'test', 'text']
 i = 0
-result = ['True' if type(i) == int or type(i) == float or type(i) == bool else 'False' for i in lst_words ]
+result = [True if type(i) == int or type(i) == float or type(i) == bool else False for i in lst_words ]
 print(result)

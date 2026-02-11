@@ -21,6 +21,7 @@ cities1 = ['Moscow', 'Togliatty', 'Samara']
 cities2 = ['Samara', 'Saratov', 'Novgorod']
 cities3 = cities1 + cities2
 print(set(cities3))
+print(len(set(cities3)))
 
 # ===============================================
 # 3. Создайте множество с числами от 1 до 10.
