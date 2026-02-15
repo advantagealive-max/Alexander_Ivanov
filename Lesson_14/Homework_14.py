@@ -24,7 +24,7 @@ print(pow(5, 3))
 # Выбранный язык: Python  # (значение может отличаться)
 
 import random
-print(random.randint(1,10))
+print(f' Случайное число: {random.randint(1, 10)}')
 text = ['Python', 'Java', 'C++']
 print(f'Выбранный язык: {random.choice(text)}')
 
@@ -109,7 +109,7 @@ plt.plot(x, y, marker='o')
 plt.title("Пример графика")
 plt.xlabel("X")
 plt.ylabel("Y")
-plt.show
+plt.show()
 
 # ===============================================
 # 8. Создайте requirements.txt с зависимостями вашего проекта.
